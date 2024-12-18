@@ -1,0 +1,15 @@
+* {
+    border: none;  /* Rimuove tutti i bordi */
+    margin: 0;     /* Aggiunge un reset dei margini, che può essere utile */
+    padding: 0;    /* Aggiunge un reset dei padding, per uniformare gli spazi */
+}
+
+.container {
+    background-color: black;
+}
+
+header {
+    width: 100;
+    height: 70px;
+    border: 1px solid white;
+}
