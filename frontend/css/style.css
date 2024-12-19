@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     background-color: black;
 }
@@ -42,6 +46,7 @@ header nav {
 .menu ul li {
     list-style: inside;
     font-size: 15px;
+    background-color: darkorange;
 }
 
 
@@ -49,10 +54,12 @@ header nav {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    color: white;
+    color: black;
+    
 }
 
 .discount {
+    width: 100vw;
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -119,4 +126,59 @@ header nav {
 h1 {
     text-align: center;
     margin-bottom: 10px;
+}
+
+main, section {
+    margin-top: 20px;
+}
+
+.descrizione {
+    margin: 0 60px;
+    font-family: "Single Day";
+    font-size: 30px;
+}
+
+.paragrafo-descrizione {
+    text-align: center;
+    color: white;
+}
+
+.h2-text {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    color: white;
+}
+
+.footer-container {
+    height: 300px;
+    background-image: url('/frontend/immagini/pizza-sfondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.footer-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: white;
+}
+
+.paragrafo-footer {
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.paragrafo-footer, a {
+    color: white;
 }
