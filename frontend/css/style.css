@@ -1,26 +1,122 @@
 * {
-    border: none;  /* Rimuove tutti i bordi */
-    margin: 0;     /* Aggiunge un reset dei margini, che può essere utile */
-    padding: 0;    /* Aggiunge un reset dei padding, per uniformare gli spazi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
     background-color: black;
 }
 
-header {
-    width: 100;
-    height: 120px;
-    border: 1px solid white;
-}
-
 .logo {
-    max-height: 120%;          /* Imposta l'altezza massima dell'immagine */
-    height: auto; 
+    height: 140px;
+    width: 150px;
+   
 }
 
-.logo-container {
-    height: 100px;
-    width: 100px;
+header nav {
+    width: 100vw;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     
+}
+
+.chi-siamo, .prenota {
+    padding: 10px;
+    border: 1px solid white;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.menu ul {
+    display: flex;
+    
+}
+
+.menu ul li {
+    list-style: inside;
+    font-size: 15px;
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+}
+
+.discount {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid red;
+}
+
+.jumbo {
+    width: 100vw;
+    height: 600px;
+    border: 2px solid white;
+    background-image: url('/frontend/immagini/pizza1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbo-text {
+    background-color: darkorange;
+    width: 400px;
+    height: 130px;
+    border: 5px solid white;
+    padding: 20px;
+}
+
+.jumbo-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cta-1 {
+    background-color: white;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.cta-2 {
+    background-color: black;
+    font-weight: bold;
+    
+}
+
+.cta-1, .cta-2, a {
+    text-decoration: none;
+}
+
+.cta-1-text {
+    color: black;
+}
+
+.cta-2-text {
+    color: white;
+}
+
+.cta {
+    border-radius: 20px;
+    padding: 10px;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
 }
