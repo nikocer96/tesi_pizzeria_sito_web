@@ -11,6 +11,9 @@
 <body>
     <header>
         <nav>
+            <div class="container-logo">
+                <img class="logo" src="immagini/logo2.png">
+            </div>
             <div>
                 <h1>Il nostro menù</h1>
             </div>
@@ -19,15 +22,18 @@
     </header>
 
     <main>
-        <div class="container-menu">
-            <ul>
-                <li><a href="">Pizze Rosse</a></li>
-                <li><a href="">Pizze Bianche</a></li>
-                <li><a href="">Panuozzi</a></li>
-                <li><a href="">Bevande</a></li>
-            </ul>
+        <div class="menu">
+            <div class="menu-category" data-tipo="pizza_rossa">Pizze Rosse</div>
+            <div class="menu-category" data-tipo="pizza_bianca">Pizze Bianche</div>
+            <div class="menu-category" data-tipo="friggitoria">Friggitoria</div>
+            <div class="menu-category" data-tipo="bevanda">Bevande</div>
+            
         </div>
     </main>
+    <div id="menu-list">
+
+    </div>
+    <script src="/frontend/js/script-scopri.js"></script>
 </body>
 
 </html>

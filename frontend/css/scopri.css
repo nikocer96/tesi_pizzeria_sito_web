@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    height: 100vw;
+    
     background-image: url('/frontend/immagini/sfondo2.png');
     background-size: cover;
     overflow-x: hidden;
@@ -13,7 +13,33 @@ body {
 }
 
 header nav {
-    
-    text-align: center;   
+    display: flex;
     font-size: 40px;
+}
+
+.container-logo {
+    margin-right: 250px;
+}
+
+main {
+    height: 600px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+   font-size: 30px;
+   color: white;
+}
+
+.menu-category {
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+
+.menu-category:hover {
+    color: darkblue;
 }

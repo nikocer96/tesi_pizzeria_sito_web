@@ -1,0 +1,6 @@
+[
+    {"nome": "Margherita", "tipo": "pizza_rossa", "prezzo": 8.50},
+    {"nome": "Diavola", "tipo": "pizza_rossa", "prezzo": 9.50},
+    {"nome": "Crudaiola", "tipo": "pizza_bianca", "prezzo": 7.50}
+
+]
