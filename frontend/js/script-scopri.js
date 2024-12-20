@@ -18,8 +18,28 @@ async function displayMenu(tipo) {
     }
     items.forEach(item => {
         const div = document.createElement("div");
-        div.innerHTML = `<strong>${item.nome}</strong> - ${item.prezzo} €`;
-        menuList.appendChild(div)
+        div.classList.add("menu-item");
+    
+        const textContainer = document.createElement("div");
+        textContainer.classList.add("text-container");
+    
+        const name = document.createElement("h3");
+        name.textContent = item.nome;
+    
+        const price = document.createElement("p");
+        price.textContent = `Prezzo: ${item.prezzo} €`;
+    
+        textContainer.appendChild(name);
+        textContainer.appendChild(price);
+    
+        const img = document.createElement("img");
+        img.src = item.immagine;
+        img.alt = item.nome;
+    
+        div.appendChild(textContainer);
+        div.appendChild(img);
+    
+        menuList.appendChild(div);
     });
 }
 

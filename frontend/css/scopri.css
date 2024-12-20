@@ -43,3 +43,41 @@ main {
 .menu-category:hover {
     color: darkblue;
 }
+
+.menu-item img {
+    height: 200px;
+    width: 210px;
+    margin: 20px;
+}
+
+.menu-item {
+    border: 1px solid white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container {
+    margin: 30px;
+    color: white;
+    font-size: 30px;
+}
+
+.conteiner-torna-indietro {
+    bottom: 10px;
+    border: 2px solid white;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    background-color: darkorange;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+
+.conteiner-torna-indietro a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
