@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/prenota.css">
     <title>Prenota</title>
 </head>
+
 <body>
+    <h1>Prenota la tua pizza</h1>
     <form name="form-prenotazione">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome">
+        <div class="form-input">
+           <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+           </div>
 
-        <label for="cognome">Cognome:</label>
-        <input type="text" id="cognome">
+            <div>
+                <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome">
+            </div>
 
-        <label for="data-ora">Data e Ora:</label>
-        <input type="datetime-local" id="data-ora">
+            <div>
+                <label for="data-ora">Data e Ora:</label>
+            <input type="datetime-local" id="data-ora">
+            </div>
 
-        <label for="descrizione">Descrizione:</label>
-        <input type="text" id="descrizione" name="descrizione">
-        <button type="submit">Prenota</button>
+            <div>
+                <label for="descrizione">Descrizione:</label>
+            <input type="text" id="descrizione" name="descrizione">
+            </div>
+            <div class="form-bottone">
+                <button type="submit">Prenota</button>
+            </div>
+        </div>
+        
     </form>
     <script src="/frontend/js/script-prenota.js"></script>
 </body>
+
 </html>

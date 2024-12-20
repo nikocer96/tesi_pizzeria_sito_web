@@ -1,0 +1,34 @@
+body {
+    background-image: url("/frontend/immagini/pexels-fariphotography-905847.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    margin-top: 100px;
+}
+
+.form-input {
+    height: 400px;
+    margin: 30px;
+    padding: 70px;
+}
+
+.form-input div {
+    margin-bottom: 30px;
+    padding: 10px;
+    display: flex;
+    
+}
+
+label {
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+}
