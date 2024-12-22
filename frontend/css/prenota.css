@@ -32,3 +32,38 @@ h1 {
     text-align: center;
     font-size: 80px;
 }
+
+.conteiner-torna-indietro {
+    bottom: 10px;
+    border: 2px solid white;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    background-color: darkorange;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+
+.conteiner-torna-indietro a {
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+button {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.link-modifica {
+    border: 1px solid white;
+    background-color: black;
+}
+
+.link-modifica a {
+    color: white;
+    text-decoration: none;
+}

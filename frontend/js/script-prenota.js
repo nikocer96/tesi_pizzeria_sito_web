@@ -6,6 +6,7 @@ form.addEventListener("submit", async (event) => {
     const formData = {
         nome: document.getElementById("nome").value,
         cognome: document.getElementById("cognome").value,
+        email: document.getElementById("email").value,
         data_ora: document.getElementById("data-ora").value,
         descrizione: document.getElementById("descrizione").value
     };

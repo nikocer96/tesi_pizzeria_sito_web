@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifica</title>
+</head>
+
+<body>
+    <form id="form-cerca-prenotazione">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" required>
+        </div>
+        <div>
+            <button type="submit" id="cerca-prenotazione">Cerca</button>
+        </div>
+    </form>
+
+    <form id="form-modifica" style="display: none;">
+        <div>
+            <label for="nome-modifica">Nome:</label>
+            <input type="text" id="nome-modifica">
+        </div>
+        <div>
+            <label for="cognome-modifica">Cognome:</label>
+            <input type="text" id="cognome-modifica">
+        </div>
+        <div>
+            <label for="email-modifica">Email:</label>
+            <input type="text" id="email-modifica">
+        </div>
+        <div>
+            <label for="data-ora-modifica">Data e Ora:</label>
+            <input type="datetime-local" id="data-ora-modifica">
+        </div>
+        <div>
+            <label for="descrizione">Descrizione:</label>
+            <input type="text" id="descrizione-modifica">
+        </div>
+        <div>
+            <button type="submit" id="salva-modifiche">Salva</button>
+        </div>
+    </form>
+    <script src="/frontend/js/script-modifica.js"></script>
+</body>
+
+</html>

@@ -1,9 +1,7 @@
 body {
     width: 100vw;
-    
-    background-image: url('/frontend/immagini/pizza-prenota.jpg');
-    background-size: cover;
-    overflow-x: hidden;
+    background-color: black;
+   overflow-x: hidden;
 }
 
 .logo {
@@ -80,4 +78,41 @@ main {
     font-size: 20px;
     padding: 10px;
     text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+.footer-container {
+    height: 300px;
+    background-image: url('/frontend/immagini/pizza-sfondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.footer-container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: white;
+}
+
+.paragrafo-footer {
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.paragrafo-footer, a {
+    color: white;
 }

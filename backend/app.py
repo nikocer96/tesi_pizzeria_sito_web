@@ -66,6 +66,55 @@ def prenota():
         return jsonify({"message": "Prenotazione salvata con successo!", "id": data["id"]}), 200
     except Exception as e:
         return jsonify({"error": str(e)})
+    
+@app.route("/modifica_prenotazione", methods=["POST", "PUT"])
+def modifica_prenotazione():
+    try:
+        dati_richiesta = request.json
+        nome = dati_richiesta.get("nome")
+        email = dati_richiesta.get("email")
+
+        # Verifica che nome ed email siano presenti
+        if not nome or not email:
+            return jsonify({"error": "Nome ed email sono obbligatori"}), 400
+
+        # Carica le prenotazioni
+        if os.path.exists(PRENOTA_JSON):
+            with open(PRENOTA_JSON, "r") as file:
+                prenotazioni = json.load(file)
+        else:
+            return jsonify({"error": "Nessuna prenotazione trovata"}), 404
+
+        # Cerca la prenotazione corrispondente
+        prenotazione = next((p for p in prenotazioni if p["nome"] == nome and p["email"] == email), None)
+
+        # Se la prenotazione non esiste, restituisci un errore
+        if prenotazione is None:
+            return jsonify({"error": "Prenotazione non trovata"}), 404
+
+        # Se il metodo è POST, restituisci la prenotazione trovata
+        if request.method == "POST":
+            return jsonify({"prenotazione": prenotazione}), 200
+
+        # Se il metodo è PUT, modifica la prenotazione
+        elif request.method == "PUT":
+            prenotazione["nome"] = dati_richiesta.get("nome", prenotazione["nome"])
+            prenotazione["cognome"] = dati_richiesta.get("cognome", prenotazione["cognome"])
+            prenotazione["email"] = dati_richiesta.get("email", prenotazione["email"])
+            prenotazione["data_ora"] = dati_richiesta.get("data_ora", prenotazione["data_ora"])
+            prenotazione["descrizione"] = dati_richiesta.get("descrizione", prenotazione["descrizione"])
+
+            # Salva le modifiche nel file
+            with open(PRENOTA_JSON, "w") as file:
+                json.dump(prenotazioni, file, indent=4)
+
+            # Restituisci la prenotazione modificata
+            return jsonify({"message": "Prenotazione modificata con successo", "prenotazione": prenotazione}), 200
+
+    except Exception as e:
+        # Gestione degli errori generici
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)
