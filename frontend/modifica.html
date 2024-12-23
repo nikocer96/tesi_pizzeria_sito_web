@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/modifica.css">
     <title>Modifica</title>
 </head>
 
 <body>
+    <h1>Cerca la tua prenotazione e modificala</h1>
     <form id="form-cerca-prenotazione">
-        <div>
+        <div class="container-nome">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" required>
         </div>
-        <div>
+        <div class="container-email">
             <label for="email">Email:</label>
             <input type="text" id="email" required>
         </div>
@@ -47,6 +49,23 @@
             <button type="submit" id="salva-modifiche">Salva</button>
         </div>
     </form>
+
+    <div class="conteiner-torna-indietro">
+        <a href="./prenota.html">Torna Indietro</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="copiright">
+                <p>copiright-2024 Nico Cerone</p>
+            </div>
+            <div class="paragrafo-footer">
+                <a class="contatto-bottone" href="mailto:nikocerone96@gmail.com">Contatto</a>
+            </div>
+            
+            
+        </div>
+    </footer>
     <script src="/frontend/js/script-modifica.js"></script>
 </body>
 

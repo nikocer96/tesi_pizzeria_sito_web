@@ -25,6 +25,9 @@ form.addEventListener("submit", async (event) => {
         const result = await response.json();  // Ottieni la risposta in formato JSON
         if (response.ok) {
             alert(`Prenotazione effettuata con successo! ID prenotazione: ${result.id}`);
+            const form_input = document.getElementsByTagName("fomr-input")
+            form_input.innerHTML = "";
+            
         } else {
             alert(`Errore nella prenotazione: ${result.error}`);
         }

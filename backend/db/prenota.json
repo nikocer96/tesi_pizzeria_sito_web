@@ -12,7 +12,7 @@
         "cognome": "ceronee",
         "email": "nCerone@gmail.com",
         "data_ora": "2024-12-06T22:31",
-        "descrizione": "diavolaa",
+        "descrizione": "diavola",
         "id": 3
     },
     {
@@ -22,5 +22,21 @@
         "data_ora": "2024-12-21T02:30",
         "descrizione": "diavola",
         "id": 4
+    },
+    {
+        "nome": "pippo",
+        "cognome": "pVerdi@gmail.com",
+        "email": "pVerd@gmail.com",
+        "data_ora": "2024-12-23T15:31",
+        "descrizione": "crudaiola",
+        "id": 5
+    },
+    {
+        "nome": "chiara",
+        "cognome": "neri",
+        "email": "cNeri@gmail.com",
+        "data_ora": "2024-12-23T16:34",
+        "descrizione": "crudaiola, 1 birra",
+        "id": 6
     }
 ]

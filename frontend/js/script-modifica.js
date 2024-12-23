@@ -29,7 +29,7 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
 
         if (nomeModifica && cognomeModifica && emailModifica && dataOraModifica && descrizioneModifica) {
             document.getElementById("form-cerca-prenotazione").style.display = "none";
-            document.getElementById("form-modifica").style.display = "block";
+            document.getElementById("form-modifica").style.display = "flex";
 
             nomeModifica.value = result.prenotazione.nome;
             cognomeModifica.value = result.prenotazione.cognome;
