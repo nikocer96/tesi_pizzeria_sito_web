@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cancella.css">
+    <title>Cancella</title>
+</head>
+
+<body>
+    <h1>Cerca la tua prenotazione e cancellala</h1>
+    <form id="form-cerca-prenotazione">
+        <div class="container-nome">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+        </div>
+        <div class="container-email">
+            <label for="email">Email:</label>
+            <input type="text" id="email" required>
+        </div>
+        <div>
+            <button type="submit" id="cerca-prenotazione">Cerca</button>
+        </div>
+    </form>
+
+    <form id="form-visualizza" style="display: none;">
+        <div>
+            <label for="nome-visualizza">Nome:</label>
+            <input type="text" id="nome-visualizza" disabled>
+        </div>
+        <div>
+            <label for="cognome-visualizza">Cognome:</label>
+            <input type="text" id="cognome-visualizza" disabled>
+        </div>
+        <div>
+            <label for="email-visualizza">Email:</label>
+            <input type="text" id="email-visualizza" disabled>
+        </div>
+        <div>
+            <label for="data-ora-visualizza">Data e Ora:</label>
+            <input type="datetime-local" id="data-ora-visualizza" disabled>
+        </div>
+        <div>
+            <label for="descrizione-visualizza">Descrizione:</label>
+            <input type="text" id="descrizione-visualizza" disabled>
+        </div>
+        <div>
+            <button type="submit" id="cancella">Cancella</button>
+        </div>
+    </form>
+
+    <div class="conteiner-torna-indietro">
+        <a href="./prenota.html">Torna Indietro</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="copiright">
+                <p>copiright-2024 Nico Cerone</p>
+            </div>
+            <div class="paragrafo-footer">
+                <a class="contatto-bottone" href="mailto:nikocerone96@gmail.com">Contatto</a>
+            </div>
+            
+            
+        </div>
+    </footer>
+    <script src="/frontend/js/script-cancella.js"></script>
+</body>
+
+</html>

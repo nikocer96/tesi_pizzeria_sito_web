@@ -115,6 +115,35 @@ def modifica_prenotazione():
         # Gestione degli errori generici
         return jsonify({"error": str(e)}), 500
 
+@app.route("/cancella_prenotazione", methods=["POST", "DELETE"])
+def cancella_prenotazione():
+    try:
+        dati_richiesta = request.json
+        nome = dati_richiesta.get("nome")
+        email = dati_richiesta.get("email")
+        if not nome or not email:
+            return jsonify({"error": "Il campo nome ed email sono obbligatori"})
+        if os.path.exists(PRENOTA_JSON):
+            with open(PRENOTA_JSON, "r") as file:
+                prenotazioni = json.load(file)
+        else:
+            return jsonify({"error": "nessuna prenotazione trovata"})
+        prenotazione_trovata = next((p for p in prenotazioni if p["nome"] == nome and p["email"] == email), None)
+        if prenotazione_trovata is None:
+            return jsonify({"error": "prenotazione non trovata"}), 404
+        
+        if request.method == "POST":
+            return jsonify({"prenotazione_trovata": prenotazione_trovata}), 200
+        elif request.method == "DELETE":
+            prenotazioni.remove(prenotazione_trovata)
+            with open(PRENOTA_JSON, "w") as file:
+                json.dump(prenotazioni, file, indent=4)
+            return jsonify({"message": "Prenotazione cancellata con successo"}), 200
+        
+        
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -8,35 +8,19 @@
         "descrizione": "Margherita,acqua"
     },
     {
-        "nome": "niko",
-        "cognome": "ceronee",
-        "email": "nCerone@gmail.com",
-        "data_ora": "2024-12-06T22:31",
-        "descrizione": "diavola",
-        "id": 3
-    },
-    {
         "nome": "luigi",
         "cognome": "verdi",
         "email": "lVerdi@gmail.com",
-        "data_ora": "2024-12-21T02:30",
-        "descrizione": "diavola",
-        "id": 4
+        "data_ora": "2024-12-26T18:37",
+        "descrizione": "pizza margherita, coca cola",
+        "id": 2
     },
     {
-        "nome": "pippo",
-        "cognome": "pVerdi@gmail.com",
-        "email": "pVerd@gmail.com",
-        "data_ora": "2024-12-23T15:31",
-        "descrizione": "crudaiola",
-        "id": 5
-    },
-    {
-        "nome": "chiara",
-        "cognome": "neri",
-        "email": "cNeri@gmail.com",
-        "data_ora": "2024-12-23T16:34",
-        "descrizione": "crudaiola, 1 birra",
-        "id": 6
+        "nome": "niko",
+        "cognome": "cerone",
+        "email": "nCerone@gmail.com",
+        "data_ora": "2024-12-26T22:16",
+        "descrizione": "pizza margherita, diavola, panuozzo",
+        "id": 3
     }
 ]

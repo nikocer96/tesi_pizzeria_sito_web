@@ -22,11 +22,14 @@ form.addEventListener("submit", async (event) => {
             body: JSON.stringify(formData)
         });
 
-        const result = await response.json();  // Ottieni la risposta in formato JSON
+        const result = await response.json();  
         if (response.ok) {
             alert(`Prenotazione effettuata con successo! ID prenotazione: ${result.id}`);
-            const form_input = document.getElementsByTagName("fomr-input")
-            form_input.innerHTML = "";
+            document.getElementById("nome").value = "";
+            document.getElementById("cognome").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("data-ora").value = "";
+            document.getElementById("descrizione").value = "";
             
         } else {
             alert(`Errore nella prenotazione: ${result.error}`);
