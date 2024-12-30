@@ -20,9 +20,16 @@
             <input type="text" id="email" required>
         </div>
         <div>
-            <button type="submit" id="cerca-prenotazione">Cerca</button>
+            <button type="submit" id="cerca-prenotazione" disabled="true">Cerca</button>
         </div>
     </form>
+
+    <div class="modale" id="modale-cerca" style="display: none;">
+        <div class="contenuto-modale">
+            <p>****** Prenotazione non trovata ******</p>
+            <button id="ok">Ok</button>
+        </div>
+    </div>
 
     <form id="form-visualizza" style="display: none;">
         <div>
@@ -49,6 +56,16 @@
             <button type="submit" id="cancella">Cancella</button>
         </div>
     </form>
+
+    <div id="conferma-modale" class="modale" style="display: none;">
+        <div class="contenuto-modale">
+            <p>Sei sicuro di cancellare questa prenotazione?</p>
+            <div class="bottoni-modale">
+                <button id="conferma">Si</button>
+                <button id="annulla">No</button>
+            </div>
+        </div>
+    </div>
 
     <div class="conteiner-torna-indietro">
         <a href="./prenota.html">Torna Indietro</a>

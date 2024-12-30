@@ -118,3 +118,38 @@ footer {
     color: white;
 }
 
+
+.modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenuto-modale {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bottoni-modale button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+#conferma {
+    background-color: green;
+    color: white;
+}
+
+#annulla {
+    background-color: red;
+    color: white;
+}

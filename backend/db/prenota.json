@@ -14,13 +14,5 @@
         "data_ora": "2024-12-26T18:37",
         "descrizione": "pizza margherita, coca cola",
         "id": 2
-    },
-    {
-        "nome": "niko",
-        "cognome": "cerone",
-        "email": "nCerone@gmail.com",
-        "data_ora": "2024-12-26T22:16",
-        "descrizione": "pizza margherita, diavola, panuozzo",
-        "id": 3
     }
 ]
