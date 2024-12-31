@@ -81,7 +81,7 @@ button {
 
 .link-modifica {
     align-items: center;
-    border: 1px solid white;
+    
     background-color: #EEAD0E;
     margin-top: 9px;
     margin-right: 10px;
@@ -100,6 +100,7 @@ button {
     color: black;
     text-decoration: none;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .link-cancella {
@@ -107,7 +108,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid white;
+    
     background-color: #FF4500;
     border-radius: 4px;
     height: 28px;
@@ -117,6 +118,7 @@ button {
     font-weight: bold;
     color: black;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .footer-container {

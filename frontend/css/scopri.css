@@ -21,10 +21,13 @@ header nav {
 
 main {
     height: 600px;
-    border: 2px solid white;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu {

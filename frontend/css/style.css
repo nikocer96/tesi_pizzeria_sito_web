@@ -18,6 +18,12 @@ body {
    
 }
 
+.titolo {
+    color: orange;
+    font-size: 80px;
+    font-family: cursive;
+}
+
 header nav {
     width: 100vw;
     height: 140px;
