@@ -4,6 +4,8 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
 
+    const modaleCerca = document.getElementById("modale-cerca");
+
     try {
         const response = await fetch("http://127.0.0.1:5000/modifica_prenotazione", {
             method: "POST",  // Usa POST per cercare la prenotazione
@@ -13,8 +15,9 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
 
         if (!response.ok) {
             const result = await response.json();
+            modaleCerca.style.display = "flex";
             console.error("Errore backend:", result.error);
-            alert(result.error || "Errore sconosciuto durante la ricerca");
+            //alert(result.error || "Errore sconosciuto durante la ricerca");
             return;  // Ferma l'esecuzione
         }
 
@@ -45,6 +48,14 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
         console.error("Errore di connessione:", error);
         alert("Errore di connessione al server: " + error.message);
     }
+});
+
+document.getElementById("ok").addEventListener("click", () => {
+    const modaleCerca = document.getElementById("modale-cerca");
+    modaleCerca.style.display = "none";
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
+    
 });
 
 

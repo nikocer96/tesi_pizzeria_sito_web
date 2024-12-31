@@ -1,4 +1,4 @@
-function verificaCampi() {
+/*function verificaCampi() {
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
     const bottone = document.getElementById("cerca-prenotazione");
@@ -11,11 +11,11 @@ function verificaCampi() {
 }
 
 document.getElementById("nome").addEventListener("input", verificaCampi);
-document.getElementById("email").addEventListener("input", verificaCampi);
+document.getElementById("email").addEventListener("input", verificaCampi); */
 
 
 document.getElementById("cerca-prenotazione").addEventListener("click", async (event) => {
-    event.preventDefault();  // Impedisce il comportamento predefinito del submit del form
+    event.preventDefault();  
 
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
@@ -25,7 +25,7 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
 
     try {
         const response = await fetch("http://127.0.0.1:5000/cancella_prenotazione", {
-            method: "POST",  // Usa POST per cercare la prenotazione
+            method: "POST",  
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nome, email })
         });
@@ -37,8 +37,7 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
             console.error("Errore backend:", result.error);
             document.getElementById("nome").value = "";
             document.getElementById("email").value = "";
-            //alert(result.error || "Errore sconosciuto durante la ricerca");
-            return;  // Ferma l'esecuzione
+            return;  
         }
 
         const result = await response.json();
@@ -76,7 +75,7 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
 document.getElementById("ok").addEventListener("click", () => {
     const modaleCerca = document.getElementById("modale-cerca");
     modaleCerca.style.display = "none";
-    document.getElementById("form-cerca-prenotazione").style.display = "flex";
+    //document.getElementById("form-cerca-prenotazione").style.display = "flex";
 })
 
 

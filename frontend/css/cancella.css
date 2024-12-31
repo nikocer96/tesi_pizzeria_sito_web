@@ -56,19 +56,23 @@ h1 {
     padding: 10px;
     border: 1px solid white;
     height: 90px;
-    width: 300px;
+    width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#salva-modifiche {
+#descrizione-visualizza {
+    width: 100%;
+    height: 50px;
+}
+
+#cancella {
     font-size: 20px;
 }
 
 .conteiner-torna-indietro {
     bottom: 10px;
-    border: 2px solid white;
     width: 140px;
     display: flex;
     justify-content: center;
@@ -78,8 +82,12 @@ h1 {
     
 }
 
+.conteiner-torna-indietro:hover {
+    background-color: #CD6600;
+}
+
 .conteiner-torna-indietro a {
-    color: white;
+    color: black;
     font-size: 20px;
     padding: 10px;
     text-decoration: none;

@@ -19,10 +19,17 @@
             <label for="email">Email:</label>
             <input type="text" id="email" required>
         </div>
-        <div>
+        <div class="bottone-cerca">
             <button type="submit" id="cerca-prenotazione">Cerca</button>
         </div>
     </form>
+
+    <div class="modale" id="modale-cerca" style="display: none;">
+        <div class="contenuto-modale">
+            <p>****** Prenotazione non trovata ******</p>
+            <button id="ok">Ok</button>
+        </div>
+    </div>
 
     <form id="form-modifica" style="display: none;">
         <div>
@@ -43,7 +50,7 @@
         </div>
         <div>
             <label for="descrizione">Descrizione:</label>
-            <input type="text" id="descrizione-modifica">
+            <textarea type="text" id="descrizione-modifica"> </textarea>
         </div>
         <div>
             <button type="submit" id="salva-modifiche">Salva</button>

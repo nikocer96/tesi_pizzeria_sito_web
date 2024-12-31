@@ -122,7 +122,7 @@ def cancella_prenotazione():
         nome = dati_richiesta.get("nome")
         email = dati_richiesta.get("email")
         if not nome or not email:
-            return jsonify({"error": "Il campo nome ed email sono obbligatori"})
+            return jsonify({"error": "Il campo nome ed email sono obbligatori"}), 400
         if os.path.exists(PRENOTA_JSON):
             with open(PRENOTA_JSON, "r") as file:
                 prenotazioni = json.load(file)
