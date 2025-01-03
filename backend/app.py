@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request, send_from_directory
 import json
 from flask_cors import CORS
 import os
+from datetime import datetime
 
 app = Flask(__name__, static_folder="../frontend")
 CORS(app)
@@ -36,6 +37,17 @@ def get_next_id():
     last_id = max(prenotazione["id"] for prenotazione in prenotazioni)
     return last_id + 1
 
+def valida_prenotazione(data_prenotazione):
+    try:
+        data = datetime.strptime(data_prenotazione, "%Y-%m-%dT%H:%M")
+        giorno_settimana = data.weekday()
+        ora = data.hour
+        if giorno_settimana < 1 or giorno_settimana > 6:
+            return False
+        return (10 <= ora < 13) or (16 <= ora < 22)
+    except ValueError:
+        return False
+
 @app.route("/prenota", methods=["POST"])
 def prenota():
     try:
@@ -44,6 +56,9 @@ def prenota():
 
         # Log per verificare i dati ricevuti
         print(f"Data ricevuta: {data}")  # Assicurati che questa riga sia correttamente indentata
+
+        if not valida_prenotazione(data["data_ora"]):
+            return jsonify({"error": "La data o l'orario non è valido"}), 400
 
         # Genera un ID per la nuova prenotazione
         data["id"] = get_next_id()
@@ -98,10 +113,14 @@ def modifica_prenotazione():
 
         # Se il metodo è PUT, modifica la prenotazione
         elif request.method == "PUT":
+            nuova_data_ora = dati_richiesta.get("data_ora", prenotazione["data_ora"])
+            if not valida_prenotazione(nuova_data_ora):
+                return jsonify({"error": "La data o l'ora non sono validi"}), 400
+
             prenotazione["nome"] = dati_richiesta.get("nome", prenotazione["nome"])
             prenotazione["cognome"] = dati_richiesta.get("cognome", prenotazione["cognome"])
             prenotazione["email"] = dati_richiesta.get("email", prenotazione["email"])
-            prenotazione["data_ora"] = dati_richiesta.get("data_ora", prenotazione["data_ora"])
+            prenotazione["data_ora"] = nuova_data_ora
             prenotazione["descrizione"] = dati_richiesta.get("descrizione", prenotazione["descrizione"])
 
             # Salva le modifiche nel file

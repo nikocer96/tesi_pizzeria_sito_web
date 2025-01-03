@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+}
+
+main {
+    background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+
+nav {
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    height: 140px;
+    width: 150px;
+}
+
+.titolo {
+    color: orange;
+    font-size: 70px;
+    font-family: cursive;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.menu:hover {
+    background-color: #CD6600;
+}
+
+
+.menu {
+    padding: 10px;
+    margin-right: 20px;
+    border-radius: 15px;
+    list-style: inside;
+    font-size: 15px;
+    background-color: darkorange;
+}
+
+.prenota {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.descrizione {
+    
+    margin: 0 60px;
+    font-family: "Single Day";
+    font-size: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.info-indirizzo {
+    border: 3px solid #CD6600;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.orario-apertura h3 {
+    color: green;
+}
+
+.orario-chiusura h3 {
+    color: red;
+}
+
+.testo-info {
+    font-size: 60px;
+    font-weight: lighter;
+}

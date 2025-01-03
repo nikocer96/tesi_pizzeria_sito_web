@@ -1,3 +1,17 @@
+function validaPrenotazione(dataPrenotazione) {
+    const data = new Date(dataPrenotazione);
+    if (isNaN(data.getTime())) {
+        return false;
+    }
+    const giorno_settimana = data.getDay();
+    const ora = data.getHours();
+    if (giorno_settimana === 0 || giorno_settimana === 1) {
+        return false;
+    }
+    return (ora >= 10 && ora < 13) || (ora >= 16 && ora < 22)
+}
+
+
 document.getElementById("cerca-prenotazione").addEventListener("click", async (event) => {
     event.preventDefault();  // Impedisce il comportamento predefinito del submit del form
 
@@ -58,9 +72,14 @@ document.getElementById("ok").addEventListener("click", () => {
     
 });
 
+document.getElementById("ok-data").addEventListener("click", () => {
+    const modaleData = document.getElementById("modale-data");
+    modaleData.style.display = "none"; 
+});
 
-
-document.getElementById("salva-modifiche").addEventListener("click", async () => {
+document.getElementById("salva-modifiche").addEventListener("click", async (event) => {
+    event.preventDefault();
+    const modaleData = document.getElementById("modale-data");
     const datiModificati = {
         nome: document.getElementById("nome-modifica").value,
         cognome: document.getElementById("cognome-modifica").value,
@@ -68,6 +87,13 @@ document.getElementById("salva-modifiche").addEventListener("click", async () =>
         data_ora: document.getElementById("data-ora-modifica").value,
         descrizione: document.getElementById("descrizione-modifica").value
     };
+
+    if (!validaPrenotazione(datiModificati.data_ora)) {
+       
+        modaleData.style.display = "flex";
+        return; // Stop all other operations
+    }
+    
 
     try {
         const response = await fetch("http://127.0.0.1:5000/modifica_prenotazione", {
