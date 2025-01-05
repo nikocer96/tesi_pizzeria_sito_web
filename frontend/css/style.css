@@ -44,6 +44,10 @@ header nav {
     border-radius: 15px;
 }
 
+.menu {
+    display: none;
+}
+
 .menu ul {
     display: flex;
     
@@ -201,3 +205,77 @@ footer {
 .paragrafo-footer, a {
     color: white;
 }
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  #myLinks {
+    display: none;
+  }
+
+  /* ************** PARTE RESPONSIVE ***************** */
+
+  @media screen and (min-width: 970px) {
+    .topnav {
+      display: none; /* Mobile navigation hidden on larger screens */
+    }
+    
+    .menu {
+      display: block; /* Show desktop menu */
+    }
+  }
+
+  @media screen and (max-width: 970px) {
+    .topnav a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .topnav .icon {
+      display: block;
+      float: right;
+    }
+    
+    .menu {
+      display: none; /* Desktop menu hidden on small screens */
+    }
+
+    .titolo {
+        font-size: 40px;
+    }
+  }
+
+  @media screen and (max-width: 490px) {
+
+    .titolo {
+        font-size: 22px;
+    }
+
+    .logo {
+        height: 110px;
+        width: 110px;
+       
+    }
+
+  }

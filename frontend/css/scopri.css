@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     background-color: black;
-   overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -17,6 +17,11 @@ header nav {
 
 .container-logo {
     margin-right: 250px;
+}
+
+.titolo-scopri {
+    display: flex;
+    align-items: center;
 }
 
 main {
@@ -56,6 +61,7 @@ main {
     padding: 10px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .text-container {
@@ -122,4 +128,62 @@ footer {
 
 .paragrafo-footer, a {
     color: white;
+}
+
+/* **************** PARTE RESPONSIVE ******************* */
+
+@media screen and (max-width: 830px) {
+
+    header nav {
+        display: flex;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .container-logo {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    
+    .logo {
+        height: 110px;
+        width: 110px;
+       
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .menu-item img {
+        height: 100px;
+        width: 110px;
+        margin: 5px;
+    }
+
+    .menu-list {
+        width: 100vw;
+    }
+
+    .text-container {
+        margin: 10px;
+        color: white;
+        font-size: 20px;
+    }
+
+    main {
+        width: 100vw;
+        height: 350px;
+    }
+
+    .conteiner-torna-indietro {
+        width: 100px;
+    }
+
+    .conteiner-torna-indietro a {
+        font-size: 12px;
+    }
 }

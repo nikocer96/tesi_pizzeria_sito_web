@@ -1,4 +1,5 @@
 body {
+    
     background-color: black;
     overflow-x: hidden;
 }
@@ -10,9 +11,12 @@ form {
     background-size: cover;
 }
 
+.form-prenotazione {
+    width: 100vw;
+}
+
 .form-input {
-    height: 450px;
-    margin: 30px;
+    
     padding: 70px;
 }
 
@@ -81,7 +85,7 @@ button {
 
 .link-modifica {
     align-items: center;
-    
+    justify-content: center;
     background-color: #EEAD0E;
     margin-top: 9px;
     margin-right: 10px;
@@ -170,4 +174,40 @@ footer {
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+}
+
+/* **************** PARTE RESPONSIVE ********************* */
+
+@media screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .form-input div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .conteiner-torna-indietro {
+        width: 110px;
+    }
+
+    .conteiner-torna-indietro a {
+        font-size: 15px;
+    }
+
+   
+}
+
+@media screen and (max-width: 415px) {
+
+    .form-input {
+        width: 220px;
+    }
 }

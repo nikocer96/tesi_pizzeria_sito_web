@@ -84,3 +84,26 @@ nav {
     font-size: 60px;
     font-weight: lighter;
 }
+
+.conteiner-torna-indietro {
+    bottom: 10px;
+    
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    background-color: darkorange;
+    border-radius: 20px;
+    margin-top: 10px;
+    
+}
+
+.conteiner-torna-indietro:hover {
+    background-color: #CD6600;
+}
+
+.conteiner-torna-indietro a {
+    color: black;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+}
