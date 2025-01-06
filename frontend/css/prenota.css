@@ -1,5 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: black;
     overflow-x: hidden;
 }
@@ -9,22 +17,26 @@ form {
     background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 20px;
 }
 
 .form-prenotazione {
-    width: 100vw;
+    width: 100%;
+    margin-top: 20px;
 }
 
 .form-input {
-    
-    padding: 70px;
+    padding: 50px;
+   
+    max-width: 100%;
 }
 
 .form-input div {
     margin-bottom: 30px;
     padding: 10px;
     display: flex;
-    
 }
 
 label {
@@ -32,6 +44,7 @@ label {
     font-size: 25px;
     margin-right: 20px;
     font-weight: bold;
+    max-width: 100%;
 }
 
 #descrizione {
@@ -43,6 +56,7 @@ h1 {
     text-align: center;
     font-size: 80px;
     color: white;
+    margin-top: 10px;
 }
 
 .conteiner-torna-indietro {
@@ -74,9 +88,14 @@ button {
     padding: 8px;
 }
 
+.bottone-prenota {
+    height: 70px;
+}
+
 .bottone-prenota button {
     font-size: 20px;
     padding: 10px;
+    
 }
 
 .bottone-prenota button:hover {
@@ -90,7 +109,8 @@ button {
     margin-top: 9px;
     margin-right: 10px;
     border-radius: 4px;
-    height: 28px;
+    height: 50px;
+    width: 200px;
 }
 
 .link-modifica:hover {
@@ -115,7 +135,8 @@ button {
     
     background-color: #FF4500;
     border-radius: 4px;
-    height: 28px;
+    height: 50px;
+    width: 200px;
 }
 
 .link-cancella a {
@@ -130,18 +151,16 @@ button {
     background-image: url('/frontend/immagini/pizza-sfondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-footer {
-    margin-top: 50px;
-}
-
-.footer-container {
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: end;
     color: white;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
 }
 
 .paragrafo-footer {
@@ -205,9 +224,9 @@ footer {
    
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 651px) {
 
-    .form-input {
-        width: 220px;
+    .bottone-prenota {
+        width: 200px;
     }
 }

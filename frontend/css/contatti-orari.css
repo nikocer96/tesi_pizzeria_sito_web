@@ -1,32 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: black;
+     
 }
 
 main {
+    max-width: 100%; 
+    margin: 0 auto;
     background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: hidden;
 }
 
 
 nav {
-    height: 140px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    
 }
 
 .logo {
-    height: 140px;
+    height: auto;
     width: 150px;
+    max-width: 100%;
 }
 
 .titolo {
     color: orange;
-    font-size: 70px;
+    font-size: 60px;
     font-family: cursive;
 }
 
@@ -54,8 +68,6 @@ nav {
 }
 
 .descrizione {
-    
-    margin: 0 60px;
     font-family: "Single Day";
     font-size: 40px;
     color: white;
@@ -85,6 +97,10 @@ nav {
     font-weight: lighter;
 }
 
+.section-2 {
+    margin-top: 20px;
+}
+
 .conteiner-torna-indietro {
     bottom: 10px;
     
@@ -106,4 +122,90 @@ nav {
     font-size: 20px;
     padding: 10px;
     text-decoration: none;
+}
+
+.footer-container {
+    height: 300px;
+    background-image: url('/frontend/immagini/pizza-sfondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: white;
+}
+
+footer {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.paragrafo-footer {
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.paragrafo-footer, a {
+    color: white;
+}
+
+/* *************** PARTE RESPONSIVE ************* */
+
+@media screen and (max-width: 800px) {
+
+    .titolo {
+        font-size: 22px;
+    }
+
+    .logo {
+        height: 110px;
+        width: 110px;
+       
+    }
+
+    .conteiner-torna-indietro {
+        width: 110px;
+    }
+
+    .conteiner-torna-indietro a {
+        font-size: 15px;
+    }
+    
+  }
+
+  @media screen and (max-width: 586px) {
+
+    .descrizione {
+        font-size: 30px;
+    }
+
+    .testo-info {
+        font-size: 40px;
+    }
+
+    main {
+        height: 500px;
+    }
+
+    .menu {
+        margin-right: 0;
+    }
+  }
+
+
+
+@media screen and (max-width: 426px) {
+
+    .descrizione {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
 }

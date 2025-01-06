@@ -1,6 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 body {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+    margin: 0; 
     background-color: black;
-    overflow-x: hidden;
 }
 
 label {
@@ -17,22 +26,29 @@ form {
     background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    max-width: 100%; 
+    margin: 0 auto; 
+    padding: 20px;
 }
 
 #form-cerca-prenotazione {
-    height: 800px;
+    height: 600px;
+    width: 100%;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 #form-cerca-prenotazione div {
     padding: 20px;
     border: 1px solid white;
     height: 100px;
-    width: 300px;
+    width: 100%; 
+    max-width: 300px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,17 +62,20 @@ h1 {
 
 #form-visualizza {
     height: 800px;
+    width: 100%;
     border: 1px solid white;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 #form-visualizza div {
     padding: 10px;
     border: 1px solid white;
     height: 90px;
-    width: 600px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,19 +117,17 @@ h1 {
     background-image: url('/frontend/immagini/pizza-sfondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-footer {
-    margin-top: 50px;
-}
-
-.footer-container {
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: end;
     color: white;
 }
+
+footer {
+    margin-top: 50px;
+}
+
 
 .paragrafo-footer {
     background-color: black;
@@ -160,4 +177,30 @@ footer {
 #annulla {
     background-color: red;
     color: white;
+}
+
+/* *************** èARTE RESPONSIVE *************** */
+
+@media screen and (max-width: 945px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+   
+}
+
+@media screen and (max-width: 580px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .conteiner-torna-indietro {
+        width: 110px;
+    }
+
+    .conteiner-torna-indietro a {
+        font-size: 15px;
+    }
 }
