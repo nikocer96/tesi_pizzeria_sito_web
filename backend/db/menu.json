@@ -1,6 +1,24 @@
 [
-    {"nome": "Margherita", "tipo": "pizza_rossa", "prezzo": 8.50, "immagine": "/backend/immagini/margherita.jpg"},
-    {"nome": "Diavola", "tipo": "pizza_rossa", "prezzo": 9.50, "immagine": "/backend/immagini/diavola.jpg"},
-    {"nome": "Crudaiola", "tipo": "pizza_bianca", "prezzo": 7.50, "immagine": "/backend/immagini/crudaiola.jpg"}
+    {"nome": "Margherita", "tipo": "pizza_rossa", "prezzo": 8.50, "immagine": "/backend/immagini/pizze-rosse/margherita.jpg"},
+    {"nome": "Diavola", "tipo": "pizza_rossa", "prezzo": 9.50, "immagine": "/backend/immagini/pizze-rosse/diavola.jpg"},
+    {"nome": "Marinara", "tipo": "pizza_rossa", "prezzo": 3.50, "immagine": "/backend/immagini/pizze-rosse/marinara.jpg"},
+    {"nome": "Tonno e Cipolla", "tipo": "pizza_rossa", "prezzo": 7.50, "immagine": "/backend/immagini/pizze-rosse/tonno-cipolla.jpg"},
+    {"nome": "Vegetariana", "tipo": "pizza_rossa", "prezzo": 6.50, "immagine": "/backend/immagini/pizze-rosse/vegetariana.jpg"},
+    {"nome": "Crudaiola", "tipo": "pizza_bianca", "prezzo": 7.50, "immagine": "/backend/immagini/pizza-bianche/crudaiola.jpg"},
+    {"nome": "4 formaggi", "tipo": "pizza_bianca", "prezzo": 8.50, "immagine": "/backend/immagini/pizza-bianche/pizza-4formaggi.jpg"},
+    {"nome": "Funghi", "tipo": "pizza_bianca", "prezzo": 5.50, "immagine": "/backend/immagini/pizza-bianche/pizza-funghi-basilico.jpg"},
+    {"nome": "Patate", "tipo": "pizza_bianca", "prezzo": 6.50, "immagine": "/backend/immagini/pizza-bianche/pizza-patate.jpg"},
+    {"nome": "Arancino Melanzane", "tipo": "friggitoria", "prezzo": 2.50, "immagine": "/backend/immagini/friggitoria/arancino-melanzane.jpg"},
+    {"nome": "Arancino Ragu'", "tipo": "friggitoria", "prezzo": 3.50, "immagine": "/backend/immagini/friggitoria/arancino-ragu.jpg"},
+    {"nome": "Arancino Zafferano", "tipo": "friggitoria", "prezzo": 4.50, "immagine": "/backend/immagini/friggitoria/arancino-zafferano.jpg"},
+    {"nome": "Crocchetta Di Patate", "tipo": "friggitoria", "prezzo": 1.50, "immagine": "/backend/immagini/friggitoria/crocchetta-patate.jpg"},
+    {"nome": "Crocchetta Di Pollo", "tipo": "friggitoria", "prezzo": 1.80, "immagine": "/backend/immagini/friggitoria/crocchetta-pollo.jpg"},
+    {"nome": "Acqua Frizzante", "tipo": "bevanda", "prezzo": 1.0, "immagine": "/backend/immagini/bevande/acqua-frizzante.jpg"},
+    {"nome": "Acqua Liscia", "tipo": "bevanda", "prezzo": 1.0, "immagine": "/backend/immagini/bevande/acqua-liscia.jpg"},
+    {"nome": "Birra Spina", "tipo": "bevanda", "prezzo": 3.0, "immagine": "/backend/immagini/bevande/birra-spina.jpg"},
+    {"nome": "Heineken", "tipo": "bevanda", "prezzo": 2.50, "immagine": "/backend/immagini/bevande/heineken.jpg"},
+    {"nome": "Peroni", "tipo": "bevanda", "prezzo": 1.50, "immagine": "/backend/immagini/bevande/peroni.jpg"},
+    {"nome": "Coca Cola", "tipo": "bevanda", "prezzo": 1.50, "immagine": "/backend/immagini/bevande/cola.jpg"},
+    {"nome": "Aranciata", "tipo": "bevanda", "prezzo": 1.50, "immagine": "/backend/immagini/bevande/fanta.jpg"}
 
 ]

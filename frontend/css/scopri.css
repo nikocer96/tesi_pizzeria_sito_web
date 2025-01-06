@@ -72,6 +72,7 @@ main {
     margin: 30px;
     color: white;
     font-size: 30px;
+    max-width: 170px;
 }
 
 .conteiner-torna-indietro {
