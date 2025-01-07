@@ -1,27 +1,9 @@
-/*function verificaCampi() {
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const bottone = document.getElementById("cerca-prenotazione");
-
-    if (nome && email) {
-        bottone.disabled = false;  
-    } else {
-        bottone.disabled = true;  
-    }
-}
-
-document.getElementById("nome").addEventListener("input", verificaCampi);
-document.getElementById("email").addEventListener("input", verificaCampi); */
-
-
+/* EVENTO PER CERCARE LA PRENOTAZIONE TRAMITE NOME ED EMAIL */
 document.getElementById("cerca-prenotazione").addEventListener("click", async (event) => {
     event.preventDefault();  
-
     const nome = document.getElementById("nome").value;
     const email = document.getElementById("email").value;
-
     const modaleCerca = document.getElementById("modale-cerca");
-    
 
     try {
         const response = await fetch("http://127.0.0.1:5000/cancella_prenotazione", {
@@ -29,8 +11,6 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nome, email })
         });
-        
-
         if (!response.ok) {
             const result = await response.json();
             modaleCerca.style.display = "flex";
@@ -39,10 +19,8 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
             document.getElementById("email").value = "";
             return;  
         }
-
         const result = await response.json();
-
-        // Verifica che gli elementi esistano prima di cercare di modificarli
+        // VERIFICARE CHE GLI ELEMENTI ESISTANO
         const nomeVisualizza = document.getElementById("nome-visualizza");
         const cognomeVisualizza = document.getElementById("cognome-visualizza");
         const emailVisualizza = document.getElementById("email-visualizza");
@@ -63,32 +41,25 @@ document.getElementById("cerca-prenotazione").addEventListener("click", async (e
             console.error("Alcuni campi non sono stati trovati nel DOM.");
             alert("Errore: uno o più campi non sono stati trovati.");
         }
-
     } catch (error) {
         console.error("Errore di connessione:", error);
         alert("Errore di connessione al server: " + error.message);
     }
-
-    
 });
 
+// EVENTO PER CHIUDERE LA FINESTRA DEL MESSAGGIO CON PRENOTAZIONE NON TROVATA
 document.getElementById("ok").addEventListener("click", () => {
     const modaleCerca = document.getElementById("modale-cerca");
     modaleCerca.style.display = "none";
-    //document.getElementById("form-cerca-prenotazione").style.display = "flex";
 })
 
-
-
+// EVENTO PER CONFERMARE O MENO LA CANCELLAZIONE DELLA PRENOTAZIONE
 document.getElementById("cancella").addEventListener("click", async (e) => {
     e.preventDefault();
     const modale = document.getElementById("conferma-modale");
     modale.style.display = "flex";
-
     const confermaBottone = document.getElementById("conferma");
     const annullaBottone = document.getElementById("annulla");
-
-     
 
     confermaBottone.onclick = async () => {
         const datiCancella = {
@@ -105,30 +76,23 @@ document.getElementById("cancella").addEventListener("click", async (e) => {
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(datiCancella)
             });
-    
-            // Verifica se la risposta è ok
             const result = await response.json();
-    
-            console.log("Result ricevuto dal server:", result);  // Aggiungi questa riga per debug
-    
+            console.log("Result ricevuto dal server:", result); 
             if (response.ok) {
                 document.getElementById("form-cerca-prenotazione").style.display = "flex";
                 document.getElementById("form-visualizza").style.display = "none";
-    
+
                 document.getElementById("nome-visualizza").value = "";
                 document.getElementById("cognome-visualizza").value = "";
                 document.getElementById("email-visualizza").value = "";
                 document.getElementById("data-ora-visualizza").value = "";
                 document.getElementById("descrizione-visualizza").value = "";
-    
                 document.getElementById("nome").value = "";
                 document.getElementById("email").value = "";
                 modale.style.display = "none";
+
                 alert("Prenotazione cancellata con successo: " + result.message);
-                
-                
             } else {
-                // Se la risposta non è ok, mostra il messaggio di errore
                 alert("Errore durante la modifica: " + (result.error || "Errore sconosciuto"));
             }
         } catch (error) {
@@ -138,6 +102,6 @@ document.getElementById("cancella").addEventListener("click", async (e) => {
     }
 
     document.getElementById("annulla").onclick = () => {
-        modale.style.display = "none"; // Chiudi il modale
+        modale.style.display = "none"; 
     };
 });

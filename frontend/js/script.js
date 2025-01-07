@@ -1,3 +1,4 @@
+/* FUNZIONE PER APRIRE E CHIUDERE L'HAMBURGER MENU */
 function myFunction() {
     const myLinks = document.getElementById("myLinks");
     if (myLinks.style.display === "block") {

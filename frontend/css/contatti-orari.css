@@ -1,211 +1,196 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-     
+  background-color: black;
 }
 
 main {
-    max-width: 100%; 
-    margin: 0 auto;
-    background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    overflow-x: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+  background-image: url("/frontend/immagini/pizza-4952508_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  overflow-x: hidden;
 }
 
-
 nav {
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 .logo {
-    height: auto;
-    width: 150px;
-    max-width: 100%;
+  height: auto;
+  width: 150px;
+  max-width: 100%;
 }
 
 .titolo {
-    color: orange;
-    font-size: 60px;
-    font-family: cursive;
+  color: orange;
+  font-size: 60px;
+  font-family: cursive;
 }
 
 .menu a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .menu:hover {
-    background-color: #CD6600;
+  background-color: #cd6600;
 }
 
-
 .menu {
-    padding: 10px;
-    margin-right: 20px;
-    border-radius: 15px;
-    list-style: inside;
-    font-size: 15px;
-    background-color: darkorange;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 15px;
+  list-style: inside;
+  font-size: 15px;
+  background-color: darkorange;
 }
 
 .prenota {
-    text-transform: uppercase;
-    font-weight: bold;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .descrizione {
-    font-family: "Single Day";
-    font-size: 40px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: "Single Day";
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-
 .info-indirizzo {
-    border: 3px solid #CD6600;
-    padding: 10px;
-    border-radius: 10px;
+  border: 3px solid #cd6600;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .orario-apertura h3 {
-    color: green;
+  color: green;
 }
 
 .orario-chiusura h3 {
-    color: red;
+  color: red;
 }
 
 .testo-info {
-    font-size: 60px;
-    font-weight: lighter;
+  font-size: 60px;
+  font-weight: lighter;
 }
 
 .section-2 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .conteiner-torna-indietro {
-    bottom: 10px;
-    
-    width: 140px;
-    display: flex;
-    justify-content: center;
-    background-color: darkorange;
-    border-radius: 20px;
-    margin-top: 10px;
-    
+  bottom: 10px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  background-color: darkorange;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 
 .conteiner-torna-indietro:hover {
-    background-color: #CD6600;
+  background-color: #cd6600;
 }
 
 .conteiner-torna-indietro a {
-    color: black;
-    font-size: 20px;
-    padding: 10px;
-    text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .footer-container {
-    height: 300px;
-    background-image: url('/frontend/immagini/pizza-sfondo.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    color: white;
+  height: 300px;
+  background-image: url("/frontend/immagini/pizza-sfondo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  color: white;
 }
 
 footer {
-    margin-top: 50px;
-    width: 100%;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .paragrafo-footer {
-    background-color: black;
-    border: 4px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 10px;
-    font-weight: bolder;
-    font-size: 20px;
+  background-color: black;
+  border: 4px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
-.paragrafo-footer, a {
-    color: white;
+.paragrafo-footer,
+a {
+  color: white;
 }
 
 /* *************** PARTE RESPONSIVE ************* */
 
 @media screen and (max-width: 800px) {
-
-    .titolo {
-        font-size: 22px;
-    }
-
-    .logo {
-        height: 110px;
-        width: 110px;
-       
-    }
-
-    .conteiner-torna-indietro {
-        width: 110px;
-    }
-
-    .conteiner-torna-indietro a {
-        font-size: 15px;
-    }
-    
+  .titolo {
+    font-size: 22px;
   }
 
-  @media screen and (max-width: 586px) {
-
-    .descrizione {
-        font-size: 30px;
-    }
-
-    .testo-info {
-        font-size: 40px;
-    }
-
-    main {
-        height: 500px;
-    }
-
-    .menu {
-        margin-right: 0;
-    }
+  .logo {
+    height: 110px;
+    width: 110px;
   }
 
+  .conteiner-torna-indietro {
+    width: 110px;
+  }
 
+  .conteiner-torna-indietro a {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  .descrizione {
+    font-size: 30px;
+  }
+
+  .testo-info {
+    font-size: 40px;
+  }
+
+  main {
+    height: 500px;
+  }
+
+  .menu {
+    margin-right: 0;
+  }
+}
 
 @media screen and (max-width: 426px) {
-
-    .descrizione {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-    }
-
+  .descrizione {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }

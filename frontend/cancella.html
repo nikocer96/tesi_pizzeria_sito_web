@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,8 @@
 
 <body>
     <h1>Cerca la tua prenotazione e cancellala</h1>
+
+    <!-- FORM PER CERCARE LA PRENOTAZIONE TRAMITE NOME ED EMAIL -->
     <form id="form-cerca-prenotazione">
         <div class="container-nome">
             <label for="nome">Nome:</label>
@@ -24,6 +25,7 @@
         </div>
     </form>
 
+    <!-- MESSAGGIO DI ERRORE PER PRENOTAZIONE NON TROVATA -->
     <div class="modale" id="modale-cerca" style="display: none;">
         <div class="contenuto-modale">
             <p>****** Prenotazione non trovata ******</p>
@@ -31,6 +33,7 @@
         </div>
     </div>
 
+    <!-- FORM DOVE VERRANNO MOSTRATI TUTTI I DATI DELL'UTENTE CERCATO -->
     <form id="form-visualizza" style="display: none;">
         <div>
             <label for="nome-visualizza">Nome:</label>
@@ -57,6 +60,7 @@
         </div>
     </form>
 
+    <!-- FINESTRA DOVE VERRA' MOSTRATO UN MESSAGGIO DI CONFERMA PER CANCELLARE QUELLA DATA PRENOTAZIONE (SI/NO) -->
     <div id="conferma-modale" class="modale" style="display: none;">
         <div class="contenuto-modale">
             <p>Sei sicuro di cancellare questa prenotazione?</p>
@@ -67,10 +71,12 @@
         </div>
     </div>
 
+    <!-- BOTTONE PER TORNARE INDIETRO -->
     <div class="conteiner-torna-indietro">
         <a href="./prenota.html">Torna Indietro</a>
     </div>
 
+    <!-- FOOTER (PARET FINALE)-->
     <footer>
         <div class="footer-container">
             <div class="copiright">
@@ -79,10 +85,9 @@
             <div class="paragrafo-footer">
                 <a class="contatto-bottone" href="mailto:nikocerone96@gmail.com">Contatto</a>
             </div>
-            
-            
         </div>
     </footer>
+    
     <script src="/frontend/js/script-cancella.js"></script>
 </body>
 

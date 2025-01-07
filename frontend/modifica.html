@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,8 @@
 
 <body>
     <h1>Cerca la tua prenotazione e modificala</h1>
+    
+    <!-- FORM PER INSERIRE IL NOME E L'EMAIL-->
     <form id="form-cerca-prenotazione">
         <div class="container-nome">
             <label for="nome">Nome:</label>
@@ -24,6 +25,7 @@
         </div>
     </form>
 
+    <!-- UTILIZZATA PER MOSTRARE UN MESSAGGIO PER PRENOTAZIONE NON TROVATA -->
     <div class="modale" id="modale-cerca" style="display: none;">
         <div class="contenuto-modale">
             <p>****** Prenotazione non trovata ******</p>
@@ -31,6 +33,7 @@
         </div>
     </div>
 
+    <!-- FORM DOVE VERRANNO MOSTRATI TUTTI I DATI DELL'UTENTE CERCATO -->
     <form id="form-modifica" style="display: none;">
         <div>
             <label for="nome-modifica">Nome:</label>
@@ -57,18 +60,20 @@
         </div>
     </form>
 
+    <!-- UTILIZZATA PER MOSTRARE UN MESSAGGIO DI ERRORE PER DATA E ORARIO -->
     <div class="modale" id="modale-data" style="display: none;">
         <div class="contenuto-modale">
             <p>La data o l'ora sono errati</p>
             <button id="ok-data">Ok</button>
         </div>
-
     </div>
 
+    <!-- BOTTONE PER TORNARE INDIETRO -->
     <div class="conteiner-torna-indietro">
         <a href="./prenota.html">Torna Indietro</a>
     </div>
 
+    <!-- FOOTER (PARTE FINALE) -->
     <footer>
         <div class="footer-container">
             <div class="copiright">
@@ -77,10 +82,9 @@
             <div class="paragrafo-footer">
                 <a class="contatto-bottone" href="mailto:nikocerone96@gmail.com">Contatto</a>
             </div>
-            
-            
         </div>
     </footer>
+
     <script src="/frontend/js/script-modifica.js"></script>
 </body>
 

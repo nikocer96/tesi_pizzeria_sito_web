@@ -1,5 +1,6 @@
 const form = document.querySelector("form[name='form-prenotazione']");
-        
+       
+/* FUNZIONE PER VALIDARE LA DATA E L'ORA */
 function validaPrenotazione(dataPrenotazione) {
     const data = new Date(dataPrenotazione);
     if (isNaN(data.getTime())) {
@@ -13,9 +14,9 @@ function validaPrenotazione(dataPrenotazione) {
     return (ora >= 10 && ora < 13) || (ora >= 16 && ora < 22)
 }
 
-
+/* EVENTO AGGIUNTO ALLA FORM PER RECUPERARE I DATI E MANDARLI AL BACKEND */
 form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevenire il comportamento di invio predefinito del form
+    event.preventDefault(); 
     const modalePrenota = document.getElementById("modale-prenota");
     const formData = {
         nome: document.getElementById("nome").value,
@@ -25,10 +26,9 @@ form.addEventListener("submit", async (event) => {
         descrizione: document.getElementById("descrizione").value
     };
 
-    console.log("Dati inviati:", formData);  // Stampa i dati prima di inviarli
+    console.log("Dati inviati:", formData);  
 
     if (!validaPrenotazione(formData.data_ora)) {
-        //alert("L'orario o la data inserita non sono validi");
         modalePrenota.style.display = "flex";
         return;
     }
@@ -60,6 +60,7 @@ form.addEventListener("submit", async (event) => {
     }
 });
 
+/* EVENTO AL BOTTONE DELLA FINESTRA DI ERRORE */
 document.getElementById("ok").addEventListener("click", () => {
     const modalePrenota = document.getElementById("modale-prenota");
     modalePrenota.style.display = "none";

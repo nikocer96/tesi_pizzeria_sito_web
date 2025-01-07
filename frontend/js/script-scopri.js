@@ -1,3 +1,4 @@
+/*FUNZIONE UTILIZZATA PER RECUPERARE IL MENU DAL BACKEND IN BASE AL TIPO(pizza_rossa, pizza_bianca, friggitoria e bevande) */
 async function fetchMenu(tipo) {
     try {
         const response = await fetch(`http://127.0.0.1:5000/menu?tipo=${tipo}`);
@@ -8,6 +9,7 @@ async function fetchMenu(tipo) {
     }
 }
 
+/* FUNZIONE UTILIZZATA PER  MOSTRARE A SCHERMO I DATI DEL MENU' RECUPERATI DAL BACKEND*/
 async function displayMenu(tipo) {
     const menuList = document.getElementById("menu-list");
     menuList.innerHTML = "";
@@ -43,6 +45,7 @@ async function displayMenu(tipo) {
     });
 }
 
+/* UTILIZZATA PER CLICCARE IL MENU */
 document.querySelectorAll(".menu-category").forEach(category => {
     category.addEventListener("click", () => {
         const tipo = category.getAttribute("data-tipo");
