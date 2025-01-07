@@ -12,7 +12,7 @@
         "cognome": "verdi",
         "email": "lVerdi@gmail.com",
         "data_ora": "2024-12-31T18:37",
-        "descrizione": "pizza margherita, coca cola, pizza diavola, arancino ragu, 3 birre, 2 acqua gassata, vegetariana",
+        "descrizione": "pizza margherita, coca cola, pizza diavola, arancino ragu, 3 birre, 2 acqua gassata, vegetariana, 2 cola, 2 arancini",
         "id": 2
     },
     {
@@ -22,13 +22,5 @@
         "data_ora": "2025-01-02T20:15",
         "descrizione": "margherita",
         "id": 3
-    },
-    {
-        "nome": "pippo",
-        "cognome": "barti",
-        "email": "barti",
-        "data_ora": "2025-01-08T17:19",
-        "descrizione": "sdadsaada",
-        "id": 4
     }
 ]

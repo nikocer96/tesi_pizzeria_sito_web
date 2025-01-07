@@ -91,7 +91,7 @@ document.getElementById("cancella").addEventListener("click", async (e) => {
                 document.getElementById("email").value = "";
                 modale.style.display = "none";
 
-                alert("Prenotazione cancellata con successo: " + result.message);
+                alert("Prenotazione cancellata con successo");
             } else {
                 alert("Errore durante la modifica: " + (result.error || "Errore sconosciuto"));
             }

@@ -98,7 +98,7 @@ document.getElementById("salva-modifiche").addEventListener("click", async (even
         const result = await response.json();
         console.log("Result ricevuto dal server:", result); 
         if (response.ok) {
-            alert("Prenotazione modificata con successo: " + result.message);
+            alert("Prenotazione modificata con successo");
         } else {
             alert("Errore durante la modifica: " + (result.error || "Errore sconosciuto"));
         }

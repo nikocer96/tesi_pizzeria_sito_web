@@ -111,7 +111,7 @@ def modifica_prenotazione():
             with open(PRENOTA_JSON, "w") as file:
                 json.dump(prenotazioni, file, indent=4)
 
-            return jsonify({"message": "Prenotazione modificata con successo", "prenotazione": prenotazione}), 200
+            return jsonify({"prenotazione": prenotazione}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
