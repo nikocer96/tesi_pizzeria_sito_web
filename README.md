@@ -15,8 +15,11 @@ Per eseguire il progetto in locale, segui questi passaggi:
    
 1. Installa le dipendenze necessarie utilizzando pip:
    pip install flask flask-cors
+
+2. Entra nella cartella backend:
+   cd backend
    
-2. Avvia l'applicazione:
+3. Avvia l'applicazione:
   python app.py
 
 Una volta avviata, l'applicazione sarà disponibile all'indirizzo:
