@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, abort
 import json
 from flask_cors import CORS
 import os
@@ -142,6 +142,17 @@ def cancella_prenotazione():
             return jsonify({"message": "Prenotazione cancellata con successo"}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # backend/
+IMAGES_DIR = os.path.join(BASE_DIR, "immagini")        # backend/immagini
+
+@app.route('/backend/immagini/<path:filename>')
+def backend_images(filename):
+    """Serve le immagini dalla cartella backend/immagini"""
+    filepath = os.path.join(IMAGES_DIR, filename)
+    if os.path.exists(filepath):
+        return send_from_directory(IMAGES_DIR, filename)
+    abort(404)
 
 if __name__ == "__main__":
     app.run(debug=True)
