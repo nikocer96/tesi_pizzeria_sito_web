@@ -78,6 +78,7 @@ document.getElementById("ok-data").addEventListener("click", () => {
 document.getElementById("salva-modifiche").addEventListener("click", async (event) => {
     event.preventDefault();
     const modaleData = document.getElementById("modale-data");
+    const form_modifica = document.getElementById("form-modifica");
     const datiModificati = {
         nome: document.getElementById("nome-modifica").value,
         cognome: document.getElementById("cognome-modifica").value,
@@ -99,6 +100,7 @@ document.getElementById("salva-modifiche").addEventListener("click", async (even
         console.log("Result ricevuto dal server:", result); 
         if (response.ok) {
             alert("Prenotazione modificata con successo");
+            document.getElementById('form-modifica').reset();
         } else {
             alert("Errore durante la modifica: " + (result.error || "Errore sconosciuto"));
         }
